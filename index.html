@@ -15,12 +15,43 @@
   <body>
     <div class="container">
       <h1>Vanilla Weather App</h1>
+      <br />
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter City"
+          aria-label="Searchcity"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-secondary, search-button"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+      <br />
+
+      <br />
+      <div class="row">
+        <div class="col-6">
+          <h2>Harare</h2>
+          <h3>Saturday 06:41, Cloudy</h3>
+          <h4>Humidity 87%, wind Speed 9.26km/hour</h4>
+        </div>
+        <div class="col-6">
+          <h3>☀️ 20°C</h3>
+        </div>
+      </div>
+
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"
       ></script>
+      <script src="src/app.js"></script>
     </div>
-    <script src="src/app.js"></script>
   </body>
 </html>
