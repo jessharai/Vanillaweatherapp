@@ -1,7 +1,7 @@
 .container {
   max-width: 800px;
   margin: 60px auto;
-  padding: 10px 0px;
+  padding: 10px 15px;
   border: solid 1px;
   border-radius: 10px;
 }
@@ -13,6 +13,11 @@ h4,
 h5 {
   text-align: center;
 }
+
+#sun {
+  text-align: center;
+}
+
 h1 {
   color: blue;
   text-decoration: underline;
@@ -20,4 +25,14 @@ h1 {
 
 .search-button {
   background-color: rgb(0, 119, 128);
+}
+
+.float-left {
+  width: 100px;
+  height: 100px;
+  font-size: medium;
+
+  align-items: center;
+  text-align: center;
+  display: inline-flex;
 }
