@@ -34,6 +34,7 @@ ul {
 li {
   list-style-type: none;
   text-align: left;
+  text-transform: capitalize;
   color: #878787;
   font-weight: 100;
   line-height: 19px;
@@ -43,6 +44,31 @@ p {
   color: #878787;
   font-weight: 100;
   line-height: 19px;
+}
+
+.weather-temperature {
+  text-align: left;
+}
+
+.weather-temperature img {
+  margin-top: -25px;
+  margin-right: 0px;
+  height: 66px;
+  width: 66px;
+}
+
+.weather-temperature strong {
+  color: #878787;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 350;
+  margin-top: 5px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -1px;
 }
 
 .float-left {

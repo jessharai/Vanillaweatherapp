@@ -10,6 +10,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="src/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -37,32 +38,31 @@
       <br />
       <div class="row">
         <div class="col-4">
-          <h2>Harare</h2>
+          <h2 id="city"></h2>
           <p>Saturday 06:41</p>
         </div>
-        <div class="col-4">
-          <h3>
-            <div class="float-left">
-              <span class="temperature" id="temperature"
-                ><img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="sunny"
-                />
-                20</span
-              >
 
-              <span class="units">
+        <div class="col-4">
+          <div class="weather-temperature">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="sunny"
+              id="icon"
+            />
+            <div class="float-left">
+              <strong id="temperature">20</strong
+              ><span class="units">
                 <a href="#" id="celsius-click">°C</a> |
                 <a href="#" id="fahrenheit-click">°F</a>
               </span>
             </div>
-          </h3>
+          </div>
         </div>
         <div class="col-4">
           <ul>
-            <li>Sunny,</li>
-            <li>Humidity 87%,</li>
-            <li>Wind Speed 9.26km/hour</li>
+            <li id="description">,</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind Speed: <span id="windSpeed"> </span>Km/hour</li>
           </ul>
         </div>
       </div>
