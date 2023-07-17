@@ -34,10 +34,13 @@ ul {
 li {
   list-style-type: none;
   text-align: left;
-  text-transform: capitalize;
   color: #878787;
   font-weight: 100;
   line-height: 19px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 p {
