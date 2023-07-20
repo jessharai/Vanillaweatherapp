@@ -53,11 +53,14 @@ p {
   text-align: left;
 }
 
-.weather-temperature img {
-  margin-top: -25px;
-  margin-right: 0px;
-  height: 66px;
-  width: 66px;
+.active {
+  color: #878787;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .weather-temperature strong {
