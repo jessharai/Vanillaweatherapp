@@ -117,32 +117,7 @@ function handleSubmit(event) {
   cityInput(cityInputElement.value);
 }
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusClick.classList.remove("active");
-  fahrenheitClick.classList.add("active");
-  let farenheittemperature = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheittemperature);
-}
-
-function displaycelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusClick.classList.add("active");
-  fahrenheitClick.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitClick = document.querySelector("#fahrenheit-click");
-fahrenheitClick.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusClick = document.querySelector("#celsius-click");
-celsiusClick.addEventListener("click", displaycelsiusTemp);
 
 cityInput("Mutare");
