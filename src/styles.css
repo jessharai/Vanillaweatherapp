@@ -1,20 +1,17 @@
 .container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 60px auto;
-  padding: 10px 15px;
+  padding: 15px 15px;
   border: solid 1px;
   border-radius: 10px;
+  font-family: sans-serif;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/643/original/Cyan_light.jpg?1690750443");
 }
 
-h1,
 h5,
+h6,
 footer {
   text-align: center;
-}
-
-h1 {
-  color: turquoise;
-  text-decoration: underline;
 }
 
 h2 {
@@ -26,6 +23,9 @@ h2 {
   margin-bottom: 0;
 }
 
+h6 {
+  text-decoration: underline;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ ul {
 li {
   list-style-type: none;
   text-align: left;
-  color: #878787;
+  color: black;
   font-weight: 100;
   line-height: 19px;
 }
@@ -44,23 +44,13 @@ li:first-letter {
 }
 
 p {
-  color: #878787;
+  color: black;
   font-weight: 100;
   line-height: 19px;
 }
 
 .weather-temperature {
   text-align: left;
-}
-
-.active {
-  color: #878787;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
 }
 
 .weather-temperature strong {
@@ -74,12 +64,12 @@ p {
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
-  top: -1px;
+  top: px;
 }
 
 #icon {
   position: relative;
-  top: -1px;
+  top: -5px;
 }
 
 .float-left {
@@ -94,7 +84,7 @@ p {
 .temperature {
   font-weight: 700;
   font-size: 20px;
-  color: #878787;
+  color: black;
   display: block;
 }
 
@@ -112,7 +102,8 @@ p {
 }
 
 .search-button {
-  background-color: rgb(162, 237, 243);
+  color: rgb(3, 48, 87);
+  background-color: #29ceff;
 }
 
 footer {
