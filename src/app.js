@@ -23,7 +23,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class ="row">`;
@@ -51,6 +52,14 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "0efb4fc16a9ed98dc0b3aafd8491d6ad";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -74,12 +83,15 @@ function displayTemperature(response) {
   );
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function cityInput(city) {
   let apiKey = "84c9a2220b7717b5be305ba2777c0045";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -117,5 +129,4 @@ fahrenheitClick.addEventListener("click", displayFahrenheitTemp);
 let celsiusClick = document.querySelector("#celsius-click");
 celsiusClick.addEventListener("click", displaycelsiusTemp);
 
-displayForecast();
 cityInput("Harare");
